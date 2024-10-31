@@ -67,7 +67,9 @@ public class TimestampConverterTests {
     }
 
     @ParameterizedTest
-    @CsvSource({ "date, YYYY-MM-dd, 18368, 2020-04-16", "date,, 18368, 2020-04-16", "time, mm:ss.SSS, 2230, 00:02.230",
+    @CsvSource({
+            "datetime, YYYY-MM-dd'T'HH:mm:ss.SSSSSS'Z', 2023-12-25 07:22:33, 2023-12-25T07:22:33.000000Z"
+            "date, YYYY-MM-dd, 18368, 2020-04-16", "date,, 18368, 2020-04-16", "time, mm:ss.SSS, 2230, 00:02.230",
             "time,, 2230, 00:00:02.230", "datetime, YYYY-MM-dd, 1587042000279, 2020-04-16",
             "datetime,, 1587042000279, 2020-04-16T13:00:00.279Z", "timestamp, YYYY-MM-dd, 1587042000279, 2020-04-16",
             "datetime2,, 1587042000279, 2020-04-16T13:00:00.279Z", "datetime2, YYYY-MM-dd, 1587042000279, 2020-04-16",
